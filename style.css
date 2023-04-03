@@ -4,3 +4,7 @@ Version: 0.1
 Author: Ryota Uoya
 Description: This is an exclusive WordPress theme for XIUXIU DESIGN.
 */
+
+#wpadminbar {
+  top:0px !important;
+}
