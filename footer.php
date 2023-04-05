@@ -12,10 +12,12 @@
  */
 
 ?>
-      </main>
-    </div>
-  </div>
+    </main>
+</div>
 </div>
 
 <?php get_template_part( 'template-parts/footer/site-footer' ); ?>
+
+</body>
+</html>
 

@@ -317,7 +317,7 @@ function xiu_xiu_design_script() {
   wp_enqueue_script(
     'main-js',
     get_template_directory_uri() . '/assets/script/main.js',
-    array('jquery'),
+    array(),
     '1.0.0',
     true
   );

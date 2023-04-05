@@ -25,7 +25,6 @@ div#wpadminbar {
 
 main {
     position: relative;
-    z-index: -1;
 }
 // header area
 .header {
@@ -87,8 +86,9 @@ main {
     & > a {
       color: $cSubTitle;
       text-decoration: none;
-      text-transform: uppercase;
       font-family:$headerFont;
+      letter-spacing: 1px;
+      font-size: 14px;
     }
   }
 
@@ -100,11 +100,15 @@ main {
       justify-content: flex-start;
     }
   }
+
+  & .site-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight:300;
+  }
 }
 
 .footer {
-  padding: 60px 0;
-  margin-top: 600px;
   @extend .content-width;
 
   &__nav {
@@ -135,4 +139,17 @@ main {
     font-size: 38px;
     justify-content: center;
   }
+  & .site-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight:300;
+  }
 }
+
+// about
+.experience-text {
+  line-height: 2;
+  letter-spacing: 0.3px;
+  font-weight: normal;
+  font-size: 20px;
+} 

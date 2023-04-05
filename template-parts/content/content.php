@@ -22,8 +22,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<div class="entry-content" style="margin:0 auto; max-width:600px; padding:200px 0px;">
 
-	<div class="entry-content">
+
 		<?php
 		the_content();
 

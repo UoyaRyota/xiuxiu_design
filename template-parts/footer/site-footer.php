@@ -5,7 +5,7 @@
 <footer class="footer appear up">
   <div class="logo item">
     <img src="assets/images/" alt="" class="logo__img" />
-    <span class="logo__stay"><?php bloginfo( 'name' ); ?></span>
+    <span class="site-title"><?php bloginfo( 'name' ); ?></span>
   </div>
   <nav class="footer__nav">
 

@@ -20,6 +20,9 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <title>My-site</title>
   <?php wp_head(); ?>
 </head>
@@ -34,19 +37,8 @@
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">
       <?php esc_html_e( 'Skip to content', 'my-site' ); ?></a>
+      <?php get_template_part( 'template-parts/header/site-header' ); ?>
 
     <div id="content" class="site-content global-container">
       <div id="primary" class="content-area container">
-
-        <aside class="side left">
-          <div class="side__inner">
-            <a class="twitter icon tween-animate-title" href="#">Twitter</a>
-            <a class="fb icon tween-animate-title" href="#">Facebook</a>
-          </div>
-        </aside>
-
         <main id="main" class="site-main">
-          <div class="mobile-menu__cover"></div>
-          <div class="nav-trigger"></div>
-
-          <?php get_template_part( 'template-parts/header/site-header' ); ?>

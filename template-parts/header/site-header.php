@@ -13,18 +13,11 @@
 
     <div class="logo item">
       <!-- <img class="logo__img" src="images/logo.svg" /> -->
-      <span class="logo__stay">
-				<?php bloginfo('name'); ?>
-			</span>
+      <span class="site-title"><?php bloginfo( 'name' ); ?></span>
 		</div>
 
+		<?php get_template_part( 'template-parts/header/site-left' ); ?>
 		<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-
-		<button class="mobile-menu__btn">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
 
   </div>
 </header>
