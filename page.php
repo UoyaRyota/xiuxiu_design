@@ -25,3 +25,13 @@ while ( have_posts() ) :
 endwhile; // End of the loop.
 
 // get_footer();
+?>
+
+<div class="cp_iptxt">
+	<p>
+		<label class="ef">
+		<input type="text" placeholder="お名前">
+		</label>
+	</p>
+</div>
+

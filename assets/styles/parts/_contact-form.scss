@@ -1,0 +1,45 @@
+.cp_iptxt{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 96%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: none;
+	border-bottom: 0.0625rem solid #757575;
+	background: transparent;
+}
+
+.ef input[type='text']:focus {
+	border-bottom: 2px solid #da3c41;
+	outline: none;
+}
+
+fieldset {
+  margin: 20px;
+  padding-left: 58px;
+  border: 0 none;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.form-test {
+  margin:0 auto;
+  max-width:600px; 
+  padding:200px 0px;
+}
+
+.form-contact {
+  margin:0 auto;
+  max-width:800px; 
+  padding:200px 0px;
+}
+
+.submit-center{
+  text-align: center !important;
+}
