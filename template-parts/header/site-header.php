@@ -9,7 +9,7 @@
 ?>
 
 <header id="masthead" class="header">
-	<div class="header__inner appear up">
+	<div class="header__inner appear up scroll-up">
 
     <div class="logo item">
       <!-- <img class="logo__img" src="images/logo.svg" /> -->
@@ -21,3 +21,4 @@
 
   </div>
 </header>
+

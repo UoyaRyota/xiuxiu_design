@@ -108,6 +108,19 @@ main {
   }
 }
 
+// header-scroll
+.scroll-up {
+  opacity: 0; 
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+.scroll-up.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
 .footer {
   @extend .content-width;
 

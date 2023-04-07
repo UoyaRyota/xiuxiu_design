@@ -315,8 +315,24 @@ function xiu_xiu_design_script() {
   );
 
   wp_enqueue_script(
-    'main-js',
-    get_template_directory_uri() . '/assets/script/main.js',
+    'xiuxiu-js',
+    get_template_directory_uri() . '/assets/scripts/main.js',
+    array(),
+    '1.0.0',
+    true
+  );
+
+  wp_enqueue_script(
+    'test-js',
+    get_template_directory_uri() . '/assets/scripts/libs/test.js',
+    array(),
+    '1.0.0',
+    true
+  );
+
+  wp_enqueue_script(
+    'contact-form-js',
+    get_template_directory_uri() . '/assets/scripts/libs/contact-form.js',
     array(),
     '1.0.0',
     true
@@ -340,7 +356,6 @@ function xiu_xiu_design_script() {
 
 }
 add_action('wp_enqueue_scripts', 'xiu_xiu_design_script');
-
 
 // Added class to li in wp_nav_menu
 function add_additional_class_on_li($classes, $item, $args) {
