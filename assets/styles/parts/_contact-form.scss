@@ -56,67 +56,19 @@ fieldset {
 }
 
 .nice-label{
-  position: absolute;
-  top: 30px;
-  left: 10px;
-  font-size: 16px;
-  color: #a0a0a0;
-  transition: all 0.25s ease;
-  
-  &.focus{
-    top: -5px;
-    left: 5px;
-    font-size: 14px;
-    color: #a0a0a0;
-  }
+  @include contactFocus;
 }
 
 .nice-label2{
-  position: absolute;
-  top: 30px;
-  left: 10px;
-  font-size: 16px;
-  color: #a0a0a0;
-  transition: all 0.25s ease;
-  
-  &.focus{
-    top: -5px;
-    left: 5px;
-    font-size: 14px;
-    color: #a0a0a0;
-  }
+  @include contactFocus;
 }
 
 .nice-label3{
-  position: absolute;
-  top: 30px;
-  left: 10px;
-  font-size: 16px;
-  color: #a0a0a0;
-  transition: all 0.25s ease;
-  
-  &.focus{
-    top: -5px;
-    left: 5px;
-    font-size: 14px;
-    color: #a0a0a0;
-  }
+  @include contactFocus;
 }
 
 .nice-label4{
-  position: absolute;
-  top: 30px;
-  left: 10px;
-  font-size: 16px;
-  color: #a0a0a0;
-  transition: all 0.25s ease;
-  
-  &.focus{
-    top: -5px;
-    left: 5px;
-    font-size: 14px;
-    color: #a0a0a0;
-  }
+  @include contactFocus;
 }
 
 
