@@ -20,12 +20,24 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
   <title>My-site</title>
   <?php wp_head(); ?>
+
 </head>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        //<form>タグのidを指定
+        $("#formCheck").validationEngine(
+            'attach', {
+                promptPosition: "topLeft"//エラーメッセージ位置の指定
+            }
+        );
+    });
+</script>
 
 
 <body <?php body_class(); ?>>
