@@ -413,6 +413,7 @@ function xiu_xiu_design_script() {
     true
   );
 
+
 }
 add_action('wp_enqueue_scripts', 'xiu_xiu_design_script');
 
@@ -436,6 +437,58 @@ function add_additional_class_on_a($classes, $item, $args)
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
+
+/**
+* Reference URL
+* https://miya-system-works.com/blog/detail/147
+*/
+
+// Add Custom Post Types
+function add_custom_post_type(){
+
+  register_post_type(
+      'works',
+      array( 
+          'label' => '制作実績',
+          'public'        => true,
+          'has_archive'   => true,
+          'menu_position' => 5,
+          'menu_icon'     => 'dashicons-edit', 
+          'supports' => array(
+              'title',
+              'editor',
+              'author',
+              'thumbnail',
+          )
+      )
+  );
+}
+add_action('init', 'add_custom_post_type');
+
+// Add a custom taxonomy
+function add_custom_taxonomy(){
+
+  register_taxonomy(
+      'works-category', 
+      'works',
+      array( 
+          'label' => 'カテゴリー',
+          'hierarchical' => true,
+          'public' => true,
+      )
+  );
+
+  register_taxonomy(
+      'works-tag', 
+      'works',
+      array(
+          'label' => 'タグ',
+          'hierarchical' => false,
+          'public' => true,
+      )
+  );
+}
+add_action('init', 'add_custom_taxonomy');
 
 
 
