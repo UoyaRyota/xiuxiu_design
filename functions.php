@@ -443,6 +443,7 @@ add_filter( 'wpcf7_validate_configuration', '__return_false' );
 * https://miya-system-works.com/blog/detail/147
 */
 
+// Add custom post type archive template works
 function post_has_archive( $args, $post_type ) {
 	if ( 'post' == $post_type ) {
 		$args['rewrite'] = true;
@@ -476,28 +477,28 @@ add_action('init', 'add_custom_post_type');
 
 // Add a custom taxonomy
 function add_custom_taxonomy(){
+    register_taxonomy(
+        'works-category',
+        'works',
+        array(
+            'label' => 'カテゴリー',
+            'hierarchical' => true,
+            'public' => true,
+        )
+    );
 
-  register_taxonomy(
-      'works-category', 
-      'works',
-      array( 
-          'label' => 'カテゴリー',
-          'hierarchical' => true,
-          'public' => true,
-      )
-  );
-
-  register_taxonomy(
-      'works-tag', 
-      'works',
-      array(
-          'label' => 'タグ',
-          'hierarchical' => false,
-          'public' => true,
-      )
-  );
+    register_taxonomy(
+        'works-tag',
+        'works',
+        array(
+            'label' => 'タグ',
+            'hierarchical' => false,
+            'public' => true,
+        )
+    );
 }
 add_action('init', 'add_custom_taxonomy');
+
 
 
 

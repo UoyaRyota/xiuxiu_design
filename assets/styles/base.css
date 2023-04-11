@@ -560,6 +560,59 @@ fieldset div {
     transform: translateY(0);
   }
 }
+ul.cards7 {
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+li.card7 {
+  display: inline-block;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 48%;
+  z-index: 1;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+li.card7 img {
+  width: 100%;
+}
+
+li.card7 .card__image-holder {
+  background: rgba(0, 0, 0, 0.1);
+  height: 0;
+  padding-bottom: 57%;
+  overflow: hidden;
+}
+
+li.card7 .card__image-holder img {
+  transition: all 0.1s 0s ease-in;
+}
+
+li.card7:hover > .card__image-holder img {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+  ul.cards7 {
+    flex-direction: column;
+  }
+  li.card7 {
+    width: 100%;
+  }
+}
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   margin: 0;
