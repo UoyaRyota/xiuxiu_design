@@ -464,6 +464,7 @@ function add_custom_post_type(){
           'has_archive'   => true,
           'menu_position' => 5,
           'menu_icon'     => 'dashicons-edit', 
+          'show_in_rest' => true,
           'supports' => array(
               'title',
               'editor',
