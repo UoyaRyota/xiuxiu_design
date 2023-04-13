@@ -6,3 +6,7 @@
 @import 'pages/works';
 @import 'pages/home';
 
+.works-list__list-item{
+  display: flex;
+  height: 500px;
+}

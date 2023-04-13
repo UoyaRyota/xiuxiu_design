@@ -858,4 +858,9 @@ main {
   letter-spacing: 0.3px;
   font-weight: normal;
   font-size: 20px;
+}
+
+.works-list__list-item {
+  display: flex;
+  height: 500px;
 }/*# sourceMappingURL=base.css.map */

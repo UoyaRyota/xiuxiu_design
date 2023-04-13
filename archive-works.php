@@ -16,8 +16,8 @@
 <?php get_header();?>
 
 <?php ?>
+<article class="works-list__list-item">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <article class="works-list__list-item">
     <ul class="cards7">
       <li class="card7">
         <a href="<?php the_permalink(); ?>" class="works-item">
@@ -32,7 +32,7 @@
         </a>
       </li>
     </ul>
-    </article>
-<?php endwhile; endif; ?>
+    <?php endwhile; endif; ?>
+  </article>
 
 <?php get_footer();?>
