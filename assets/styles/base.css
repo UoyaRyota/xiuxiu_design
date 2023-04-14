@@ -576,7 +576,6 @@ li.card7 {
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
-  width: 48%;
   z-index: 1;
   border-radius: 2px;
   background: #fff;
@@ -584,6 +583,8 @@ li.card7 {
   padding: 0;
   cursor: pointer;
   margin-bottom: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 li.card7 img {
@@ -862,5 +863,5 @@ main {
 
 .works-list__list-item {
   display: flex;
-  height: 500px;
+  margin: 100px;
 }/*# sourceMappingURL=base.css.map */
