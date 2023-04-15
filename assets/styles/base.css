@@ -808,7 +808,6 @@ main {
   }
 }
 .header .site-title {
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
 }
@@ -849,7 +848,6 @@ main {
   justify-content: center;
 }
 .footer .site-title {
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
 }
