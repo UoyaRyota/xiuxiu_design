@@ -434,7 +434,7 @@ function add_additional_class_on_a($classes, $item, $args)
   }
   return $classes;
 }
-add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+// add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
 
