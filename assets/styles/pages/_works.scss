@@ -1,3 +1,15 @@
+.works-list-item{
+  margin: 100px;
+
+  & .works-list-title{
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    font-family: $headerFont ;
+    color:$cWorksTitle;
+    padding: 70px 0px;
+  }
+}
+
 ul.cards7 {
   border: none;
   padding: 0;
@@ -12,6 +24,15 @@ ul.cards7 {
     width:30%;
   }
 }
+
+.sample_box>img{
+  transition:2s all;
+}
+.sample_box>img:hover{
+  transform:scale(1.2,1.2);
+  transition:2s all;
+}
+
 li.card7 {
   display: inline-block;
   perspective: 1000;
@@ -39,9 +60,9 @@ li.card7 .card__image-holder {
   overflow: hidden;
 }
 li.card7 .card__image-holder img {
-  transition: all 0.1s 0s ease-in;
+  transition: all 0.3s 0s ease-in;
 }
-li.card7:hover > .card__image-holder img {
+li.card7::hover > .card__image-holder img {
   transform: scale(1.05);
 }
 
