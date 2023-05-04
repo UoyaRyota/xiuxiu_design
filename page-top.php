@@ -25,8 +25,41 @@ while ( have_posts() ) :
 	}
 
 endwhile; // End of the loop.
-
 ?>
+  <?php
+  $args = array(
+    'post_type' => '',
+    'posts_per_page' => 3
+  );
+
+  $my_query = new WP_Query( $args );
+?>
+
+<article class="works-list-item">
+    <ul class="cards7">
+
+      <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+
+      <li class="card7">
+        <a href="<?php the_permalink(); ?>" class="works-item">
+          <div class="card__image-holder">
+            <?php if(has_post_thumbnail()): ?>
+            <img class="works-item__thumbnail-image card__image" src="<?php the_post_thumbnail_url('large'); ?>">
+            <?php endif; ?>
+          </div>
+        </a>
+      </li>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    </ul>
+  </article>
+
+  <div style="text-align: center;">
+    <a href="<?php echo home_url().'/works'; ?>">
+      <input class="wpcf7-form-control has-spinner wpcf7-submit btn filled" type="submit" value="もっと見る">
+    </a>
+  </div>
+
 
 <section class="travel">
   <div class="travel__inner">
@@ -60,18 +93,13 @@ endwhile; // End of the loop.
 
   <?php
   $args = array(
-    'post_type' => 'works', //カスタム投稿タイプ名
-    'posts_per_page' => 3 //取得する投稿の件数
+    'post_type' => 'works',
+    'posts_per_page' => 3
   );
- 
+
   $my_query = new WP_Query( $args );
 ?>
-<aside class="side left">
-  <div class="side__inner">
-    <a class="twitter icon tween-animate-title" href="#">Twitter</a>
-    <a class="fb icon tween-animate-title" href="#">Facebook</a>
-  </div>
-</aside>
+
   <article class="works-list-item">
     <ul class="cards7">
 
@@ -98,6 +126,11 @@ endwhile; // End of the loop.
       <input class="wpcf7-form-control has-spinner wpcf7-submit btn filled" type="submit" value="もっと見る">
     </a>
   </div>
+
+
+  <?php 
+  test_post('works');
+  ?>
 
 
   <? get_footer();?>

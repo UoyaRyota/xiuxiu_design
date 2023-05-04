@@ -490,6 +490,59 @@ function add_custom_taxonomy(){
 add_action('init', 'add_custom_taxonomy');
 
 
+function test_post($x) {
+
+  $args = array(
+    'post_type' => '',
+    'posts_per_page' => 3
+  );
+
+  $my_query = new WP_Query( $args );
+
+  print_r($my_query);
+  
+  $sHtml = '';
+  $sHtml .= '<article class="works-list-item">';
+  $sHtml .= '<ul class="cards7">';
+  
+    // while ($my_query->have_posts()) {
+    //   $my_query->the_post();
+    while ( $my_query->have_posts() ) : $my_query->the_post();
+  
+
+      $sHtml .='<li class="card7">';
+      $sHtml .='<a href="' . the_permalink() . '" class="works-item">';
+      $sHtml .='<div class="card__image-holder">';
+
+        // if(has_post_thumbnail()){
+        if(has_post_thumbnail()):
+          'こんにちは';
+          $sHtml .= '<img class="works-item__thumbnail-image card__image" src="' . the_post_thumbnail_url('large'). '">';
+        // }
+      endif;
+
+      $sHtml .='</div>';
+      $sHtml .='</a>';
+      $sHtml .='</li>';
+
+    endwhile;
+    
+    // }
+    
+    wp_reset_postdata();
+
+  $sHtml .= '</ul>';
+  $sHtml .= '</article>'; 
+
+  print $sHtml;
+  
+}
+
+
+
+
+
+
 
 
 
