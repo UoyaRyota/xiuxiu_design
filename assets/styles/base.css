@@ -35,18 +35,18 @@ img {
   }
 }
 
-.content-width, .travel, .footer, .header__inner {
+.content-width, .footer, .header__inner, .travel {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .travel__inner, .footer__ul, .footer__nav, .header__nav {
+.flex, .footer__ul, .footer__nav, .header__nav, .travel__inner {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .travel__inner, .footer__ul, .footer__nav, .header__nav {
+  .flex, .footer__ul, .footer__nav, .header__nav, .travel__inner {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -375,6 +375,98 @@ fieldset div {
   outline: none;
 }
 
+.travel__inner {
+  position: relative;
+  z-index: 0;
+  margin-top: 50px;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eaebe6;
+}
+@media screen and (min-width: 600px) {
+  .travel__inner {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .travel__inner {
+    padding: 50px 150px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .travel__texts {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 47%;
+  }
+}
+.travel__texts.inview .travel__title::before {
+  animation-name: scaleX;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.travel__title {
+  position: relative;
+}
+.travel__title::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100px;
+  top: 50%;
+  left: -120px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+@media screen and (min-width: 960px) {
+  .travel__description {
+    margin-bottom: 40px;
+  }
+}
+.travel__img {
+  height: 300px;
+  box-shadow: inset 0 0 30px black;
+}
+@media screen and (min-width: 600px) {
+  .travel__img {
+    flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .travel__img {
+    height: 400px;
+  }
+}
+.travel__img > img {
+  position: relative;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.page-top-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0px;
+  font-weight: 300;
+  font-family: Helvetica Neue, Helvetica, YuGothic, Yu Gothic, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "メイリオ", Meiryo, "ＭＳＰゴシック", sans-serif;
+}
+
 .works-list-item {
   margin: 100px;
 }
@@ -419,7 +511,6 @@ li.card7 {
   z-index: 1;
   border-radius: 2px;
   background: #fff;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
   padding: 0;
   cursor: pointer;
   margin-bottom: 25px;
@@ -465,7 +556,7 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .travel__img, .sub-title {
+.mb-sm, .sub-title, .travel__img {
   margin-bottom: 16px !important;
 }
 
@@ -698,88 +789,4 @@ main {
   letter-spacing: 0.3px;
   font-weight: normal;
   font-size: 20px;
-}
-
-.travel__inner {
-  position: relative;
-  z-index: 0;
-  justify-content: space-between;
-  padding: 15px;
-  background-color: #eaebe6;
-}
-@media screen and (min-width: 600px) {
-  .travel__inner {
-    padding: 50px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .travel__inner {
-    padding: 50px 150px;
-  }
-}
-@media screen and (min-width: 600px) {
-  .travel__texts {
-    display: flex;
-    align-items: flex-end;
-    flex-basis: 47%;
-  }
-}
-.travel__texts.inview .travel__title::before {
-  animation-name: scaleX;
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
-  animation-delay: 1.5s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-.travel__title {
-  position: relative;
-}
-.travel__title::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100px;
-  top: 50%;
-  left: -120px;
-  background-color: black;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-@media screen and (min-width: 960px) {
-  .travel__description {
-    margin-bottom: 40px;
-  }
-}
-.travel__img {
-  height: 300px;
-  box-shadow: inset 0 0 30px black;
-}
-@media screen and (min-width: 600px) {
-  .travel__img {
-    flex-basis: 47%;
-  }
-}
-@media screen and (min-width: 960px) {
-  .travel__img {
-    height: 400px;
-  }
-}
-.travel__img > img {
-  position: relative;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes scaleX {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
 }/*# sourceMappingURL=base.css.map */

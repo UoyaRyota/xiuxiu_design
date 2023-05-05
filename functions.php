@@ -489,54 +489,31 @@ function add_custom_taxonomy(){
 }
 add_action('init', 'add_custom_taxonomy');
 
-
-function test_post($x) {
+function get_query_data($postType , $perPage) {
 
   $args = array(
-    'post_type' => '',
-    'posts_per_page' => 3
+    'post_type' => $postType,
+    'posts_per_page' => $perPage
   );
-
   $my_query = new WP_Query( $args );
 
-  print_r($my_query);
+  return $my_query;
+}
+
+function get_button($urlString,$btnText,$addClass = null ,$addOption = 'text-align: center;') {
+
+  $url = home_url().'/'.$urlString;
   
-  $sHtml = '';
-  $sHtml .= '<article class="works-list-item">';
-  $sHtml .= '<ul class="cards7">';
-  
-    // while ($my_query->have_posts()) {
-    //   $my_query->the_post();
-    while ( $my_query->have_posts() ) : $my_query->the_post();
-  
-
-      $sHtml .='<li class="card7">';
-      $sHtml .='<a href="' . the_permalink() . '" class="works-item">';
-      $sHtml .='<div class="card__image-holder">';
-
-        // if(has_post_thumbnail()){
-        if(has_post_thumbnail()):
-          'こんにちは';
-          $sHtml .= '<img class="works-item__thumbnail-image card__image" src="' . the_post_thumbnail_url('large'). '">';
-        // }
-      endif;
-
-      $sHtml .='</div>';
-      $sHtml .='</a>';
-      $sHtml .='</li>';
-
-    endwhile;
-    
-    // }
-    
-    wp_reset_postdata();
-
-  $sHtml .= '</ul>';
-  $sHtml .= '</article>'; 
+  $sHtml = '<div style="' . $addOption . '" class=" ' .$addClass . '">';
+  $sHtml .='<a href="' . $url . '">';
+  $sHtml .='<input class="wpcf7-form-control has-spinner wpcf7-submit btn filled" type="submit" value="' .$btnText . '">';
+  $sHtml .='</a>';
+  $sHtml .='</div>';
 
   print $sHtml;
-  
 }
+
+
 
 
 
