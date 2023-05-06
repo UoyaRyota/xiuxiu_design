@@ -1,4 +1,12 @@
-
+<?php
+/**
+ * Displays the site footer.
+ *
+ * @package WordPress
+ * @subpackage Xiuxiu_Design
+ * @since xiuxiu design 1.0
+ */ 
+?>
 <!-- aside right area -->
 <?php get_template_part( 'template-parts/footer/side-right' ); ?>
 

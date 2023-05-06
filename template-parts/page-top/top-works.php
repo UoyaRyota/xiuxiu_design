@@ -1,3 +1,13 @@
+<?php
+/**
+ * Displays the top works.
+ *
+ * @package WordPress
+ * @subpackage Xiuxiu_Design
+ * @since xiuxiu design 1.0
+ */
+?>
+
 <section class="travel">
 
   <div class="travel__inner">

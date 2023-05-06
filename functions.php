@@ -315,6 +315,14 @@ function xiu_xiu_design_script() {
   );
 
   wp_enqueue_style(
+    'wow-animate',
+    get_template_directory_uri() . '/assets/styles/vendors/animate.css',
+    array(),
+    wp_get_theme()->get( 'Version' ), 
+    'all'
+  );
+
+  wp_enqueue_style(
     'google-fonts-kameron',
     'https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap" rel="stylesheet"',
     array(),
@@ -367,8 +375,8 @@ function xiu_xiu_design_script() {
   );
 
   wp_enqueue_script(
-    'test-js',
-    get_template_directory_uri() . '/assets/scripts/libs/test.js',
+    'fade-js',
+    get_template_directory_uri() . '/assets/scripts/libs/fade.js',
     array(),
     wp_get_theme()->get( 'Version' ), 
     true
@@ -408,6 +416,14 @@ function xiu_xiu_design_script() {
   wp_enqueue_script(
     'validation-ja-js',
     get_template_directory_uri() . '/assets/scripts/vendors/jquery.validationEngine-ja.js',
+    array(),
+    wp_get_theme()->get( 'Version' ), 
+    true
+  );
+
+  wp_enqueue_script(
+    'wow-js',
+    get_template_directory_uri() . '/assets/scripts/vendors/wow.js',
     array(),
     wp_get_theme()->get( 'Version' ), 
     true

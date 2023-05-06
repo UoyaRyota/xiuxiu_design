@@ -1,3 +1,7 @@
+$(function(){
+    new WOW().init();
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const main = new Main();
 });

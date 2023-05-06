@@ -50,6 +50,14 @@ li.card7 {
   margin-right: 5px;
   width: 30%;
 }
+
+li.works-opacity {
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 li.card7 img {
   width: 100%;
 }

@@ -519,6 +519,13 @@ li.card7 {
   width: 30%;
 }
 
+li.works-opacity {
+  opacity: 0.5;
+}
+li.works-opacity:hover {
+  opacity: 1;
+}
+
 li.card7 img {
   width: 100%;
 }
