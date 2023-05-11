@@ -483,7 +483,6 @@ ul.cards7 {
   padding: 0;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
 }
