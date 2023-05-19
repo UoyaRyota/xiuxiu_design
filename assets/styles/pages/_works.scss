@@ -24,6 +24,12 @@ ul.cards7 {
   }
 }
 
+ul.card7_size{
+  margin: 0px;
+  width:25%;
+  height:100%;
+}
+
 .sample_box>img{
   transition:2s all;
 }
@@ -48,6 +54,18 @@ li.card7 {
   margin-left: 5px;
   margin-right: 5px;
   width: 30%;
+}
+
+li.card_size{
+  margin:0px;
+  width:25%;
+  height:100%;
+}
+
+@media screen and (max-width: 450px) {
+  li.card_size {
+    width: 50%;
+  }
 }
 
 li.works-opacity {

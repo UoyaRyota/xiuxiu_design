@@ -8,15 +8,15 @@
  */ 
 ?>
 <?php
-$args = array(
-	'posts_per_page'   => 5, 
-	'category'         => 1,
-	'orderby'          => 'ID',
-	'order'            => 'DESC',
-	'exclude'          => '',
-);
+// $args = array(
+// 	'posts_per_page'   => 5, 
+// 	'category'         => 1,
+// 	'orderby'          => 'ID',
+// 	'order'            => 'DESC',
+// 	'exclude'          => '',
+// );
 
-$datas = get_posts( $args );
+// $datas = get_posts( $args );
 
 if ( $datas ):
 

@@ -19,9 +19,9 @@
   <h1 class="works-list-title"></h1>
   <ul class="cards7">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <li class="card7 <?php if($_SERVER['REQUEST_URI'] === '/works/') {
+    <li class="card7 card_size <?php if($_SERVER['REQUEST_URI'] === '/works/') {
   print 'works-opacity';
-} ?>" style="margin: 0px; width:25%; height:100%;">
+} ?>" style="">
   <a href="<?php the_permalink(); ?>" class="works-item" style="color: black;text-decoration: none;" style="margin: 0px; width:25%; height:100%;">
     <div class="card__image-holder" style="padding-bottom:90%; overflow:visible;">
       <?php if(has_post_thumbnail()): ?>

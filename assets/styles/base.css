@@ -492,6 +492,12 @@ ul.cards7::after {
   width: 30%;
 }
 
+ul.card7_size {
+  margin: 0px;
+  width: 25%;
+  height: 100%;
+}
+
 .sample_box > img {
   transition: 2s all;
 }
@@ -518,6 +524,17 @@ li.card7 {
   width: 30%;
 }
 
+li.card_size {
+  margin: 0px;
+  width: 25%;
+  height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  li.card_size {
+    width: 50%;
+  }
+}
 li.works-opacity {
   opacity: 0.5;
 }
